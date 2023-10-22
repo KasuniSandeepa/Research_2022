@@ -1,0 +1,112 @@
+version: "3.1"
+
+rules:
+  - rule: Say goodbye anytime the user says goodbye
+    steps:
+      - intent: goodbye
+      - action: utter_goodbye
+
+  - rule: Say 'I am a bot' anytime the user challenges
+    steps:
+      - intent: bot_challenge
+      - action: utter_iamabot
+
+  - rule: Tell about diseases
+    steps:
+      - intent: inquire_disease
+      - action: action_inquire_diseases
+
+  - rule: Tell about spreading
+    steps:
+      - intent: inquire_spreading
+      - action: action_inquire_spreading
+
+  - rule: Tell about symptoms
+    steps:
+      - intent: inquire_symptoms
+      - action: action_inquire_symptoms
+
+  - rule: Tell about solutions
+    steps:
+      - intent: inquire_solutions
+      - action: action_inquire_solutions
+
+  - rule: Thanking rule
+    steps:
+      - intent: thanking
+      - action: utter_thanking
+
+  - rule: Get pineapple diseases
+    steps:
+      - intent: disease_types
+      - action: action_get_pineapple_diseases
+
+  - rule: Remind Watering
+    steps:
+      - intent: remind_to_water
+      - action: action_remind_to_water
+
+  - rule: Remind Fertilizing
+    steps:
+      - intent: remind_to_fertile
+      - action: action_remind_to_fertile
+
+  - rule: Ask the user to rephrase whenever they send a message with low NLU confidence
+    steps:
+      - intent: nlu_fallback
+      - action: utter_please_rephrase
+
+  - rule: Action Fertilizers
+    steps:
+      - intent: tell_me_about_fertilizers
+      - action: action_tell_about_fertilizers
+
+  - rule: Apply Fertilizers
+    steps:
+      - intent: apply_fertilizers
+      - action: action_apply_fertilizer
+
+  - rule: Amount Fertilizers
+    steps:
+      - intent: amount_fertilizers
+      - action: action_amount_fertilizers
+
+  - rule: Watering Methods
+    steps:
+      - intent: apply_water
+      - action: utter_apply_water
+
+  - rule: Temperature
+    steps:
+      - intent: get_temperature
+      - action: utter_get_temperature
+
+  - rule: out-of-scope
+    steps:
+    - intent: out_of_scope
+    - action: utter_out_of_scope
+
+  - rule: Ask the user to rephrase whenever they send a message with low NLU confidence
+    steps:
+      - intent: nlu_fallback
+      - action: utter_please_rephrase
+
+  - rule: Greet
+    steps:
+      - intent: greet
+      - action: utter_greet
+
+  - rule: options
+    steps:
+      - intent: options
+      - action: utter_option
+
+  - rule: pineapple
+    steps:
+      - intent: pineapple
+      - action: utter_pineapple
+
+  - rule: Pineapple Good For
+    steps:
+      - intent: pineapple_good_for
+      - action: utter_pineapple_good_for

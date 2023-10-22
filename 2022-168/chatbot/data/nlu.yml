@@ -1,0 +1,249 @@
+version: "3.1"
+
+nlu:
+  - intent: greet
+    examples: |
+      - hey
+      - hello
+      - hi
+      - hello there
+      - good morning
+      - good evening
+      - moin
+      - hey there
+      - let's go
+      - hey dude
+      - goodmorning
+      - goodevening
+      - good afternoon
+
+  - intent: goodbye
+    examples: |
+      - cu
+      - good by
+      - cee you later
+      - good night
+      - bye
+      - goodbye
+      - have a nice day
+      - see you around
+      - bye bye
+      - see you later
+
+  - intent: affirm
+    examples: |
+      - yes
+      - y
+      - indeed
+      - of course
+      - that sounds good
+      - correct
+
+  - intent: deny
+    examples: |
+      - no
+      - n
+      - never
+      - I don't think so
+      - don't like that
+      - no way
+      - not really
+
+  - intent: mood_great
+    examples: |
+      - perfect
+      - great
+      - amazing
+      - feeling like a king
+      - wonderful
+      - I am feeling very good
+      - I am great
+      - I am amazing
+      - I am going to save the world
+      - super stoked
+      - extremely good
+      - so so perfect
+      - so good
+      - so perfect
+
+  - intent: mood_unhappy
+    examples: |
+      - my day was horrible
+      - I am sad
+      - I don't feel very well
+      - I am disappointed
+      - super sad
+      - I'm so sad
+      - sad
+      - very sad
+      - unhappy
+      - not good
+      - not very good
+      - extremly sad
+      - so saad
+      - so sad
+
+  - intent: bot_challenge
+    examples: |
+      - are you a bot?
+      - are you a human?
+      - am I talking to a bot?
+      - am I talking to a human?
+
+  - intent: options
+    examples: |
+      - what do you do?
+      - how can you help?
+      - what do you know?
+      - what is your purpose?
+
+  - intent: pineapple
+    examples: |
+      - tell me about pineapple industry?
+      - let me know about pineapple fruit?
+      - can you tell me about pineapple?
+      - I want to know about pineapple.
+
+  - intent: disease_types
+    examples: |
+      - what are the pineapple diseases?
+      - what are the disease in pineapple cultivation?
+      - what types of diseases occur in pineapple?
+      - I want to know about pineapple diseases
+      - can you tell me about pineapple diseases?
+      - let me know about pineapple diseases
+
+  - intent: inquire_disease
+    examples: |
+      - what is [wilt](disease) disease?
+      - what is [root rot](disease) disease?
+      - tell me about [mealy bug](disease) disease
+      - tell me about pineapple [wilt](disease) disease
+      - what do you know about [root rot](disease) disease?
+      - please tell me about [wilt](disease) disease
+      - please tell me about [mealy bug](disease) disease
+      - let me know about [mealy bug](disease) disease
+
+  - intent: inquire_spreading
+    examples: |
+      - is that [wilt](disease) disease spreads?
+      - is that [root rot](disease) [spreads](spread)?
+      - will [mealy bug](disease) disease [spreads](spread)?  
+      - will [root rot](disease) [spreads](spread) to the other plants?
+      - is it [mealy bug](disease) [spreading](spread)?
+      - will it [root rot](disease) [spreads](spread)?
+      - will it [wilt](disease) [spread](spread) to the other plants?
+
+  - intent: inquire_symptoms
+    examples: |
+      - what are the [symptoms](symptom) of [wilt](disease) disease?
+      - what are the [symptoms](symptom) of [root rot](disease)?
+      - tell me about the [symptoms](symptom) of [mealy bug](disease) disease
+      - please tell me about the [symptoms](symptom) of [mealy bug](disease)
+      - let me know about the [symptoms](symptom) of [mealy bug](disease) disease
+
+  - intent: inquire_solutions
+    examples: |
+      - what are the [solutions](solution) for [mealy bug](disease) disease?
+      - what are the [solutions](solution) for [wilt](disease)?
+      - are there any [solutions](solution) for [root rot](disease) disease?
+      - let me know the [solutions](solution) for [mealy bug](disease) disease
+      - how can i [stop](solution) [wilt](disease) that?
+      - how can i [avoid](solution) [root rot](disease) it?
+      - what are the solutions for that?
+
+  - intent: remind_to_water
+    examples: |
+      - Could you please remind me to [watering](task) the plants in [10](time) [seconds](time_param)?
+      - Remind me to [water](task) the plants in [20](time) [minutes](time_param)?
+      - Please remind me in [30](time) [seconds](time_param) to [water](task) the plants.
+      - Please remind me to [water](task) the plants in [30](time) [minutes](time_param).
+
+  - intent: remind_to_fertile
+    examples: |
+      - Could you please remind me to [fertilizing](task) the plants in [10](time) [seconds](time_param)?
+      - Remind me to apply [fertilizer](task) the plants in [20](time) [minutes](time_param)?
+      - Please remind me in [30](time) [seconds](time_param) to apply [fertilizer](task) the plants.
+      - Please remind me to [fertilizing](task) the plants in [30](time) [minutes](time_param).
+
+  - intent: remind_to_flowering
+    examples: |
+      - Could you please remind me to [flowering](task) the plants in [10](time) [seconds](time_param)?
+      - Remind me to apply [hormones](task) the plants in [20](time) [minutes](time_param)?
+      - Please remind me in [30](time) [seconds](time_param) to apply [hormone](task) to the plants.
+      - Please remind me to [flowering](task) the plants in [30](time) [minutes](time_param).
+
+#  Story 2
+
+  - intent: tell_me_about_fertilizers
+    examples: |
+      - What are the fertilizers that can be used in pineapple cultivation?
+      - Let me know about the fertilizers in pineapple cultivations?
+      - What fertilizers can be used in pineapple cultivation?
+      - Tell me about fertilizers.
+
+  - intent: apply_fertilizers
+    examples: |
+      - tell me about [nitrogen](fertilizer) application?
+      - tell me about the use of [potassium](fertilizer)?
+      - let me know about application of [organic manure](fertilizer)
+      - how should i apply [phosphorous](fertilizer) to the plantation?
+      - Let me know about the application
+      - Could you please tell me know about the application of that?
+
+  - intent: amount_fertilizers
+    examples: |
+      - what amount of [nitrogen](fertilizer) should i apply?
+      - How much [potassium](fertilizer)  should I apply?
+      - What quantity of [phosphorous](fertilizer) should I use?
+      - Let me know about the amount?
+      - Tell me the amount?
+
+  - intent: apply_fertilizers
+    examples: |
+      - tell me about [nitrogen](fertilizer) watering?
+      - tell me about the use of [potassium](fertilizer)?
+      - let me know about application of [organic manure](fertilizer)
+      - how should i apply [phosphorous](fertilizer) to the plantation?
+      - Let me know about the application
+      - Could you please tell me know about the application of that?
+
+  - intent: apply_water
+    examples: |
+      - tell me about [watering](task)?
+      - tell me about [watering](task) methods in pineapple cultivation?
+      - how do i [watering](task) plants?
+      - what are the [watering](task) methods?  
+
+  - intent: get_temperature
+    examples: |
+      - What is the ideal temperature level for the pineapple plant?
+      - What is the best temperature for a pineapple plant?
+      - What temperature is best for the pineapple plant?
+
+  - intent: pineapple_good_for
+    examples: |
+      - what is pineapple good for?
+      - what is the use of pineapple?
+      - what benefits do pineapples have?
+      - what are the benefits of pineapples?
+      - what are the use of pineapples?
+
+  - intent: thanking
+    examples: |
+      - Thanks for the help
+      - Thanks
+      - Thanks you
+      - Thanks you so much
+
+  - intent: out_of_scope
+    examples: |
+      - I want to order food
+      - What is 2 + 2?
+      - Who's the US President?
+
+  - lookup: disease
+    examples: |
+      - wilt
+      - root rot
+      - mealy bug

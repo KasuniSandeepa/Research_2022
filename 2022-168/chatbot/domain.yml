@@ -1,0 +1,164 @@
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - bot_challenge
+  - options
+  - disease
+  - smp_wilt
+  - spread_wilt
+  - stop_wilt
+  - know_wilt
+  - disease_types
+  - inquire_solutions
+  - inquire_symptoms
+  - inquire_spreading
+  - inquire_disease
+  - thanking
+  - remind_to_water
+  - remind_to_fertile
+  - remind_to_flowering
+  - tell_me_about_fertilizers
+  - apply_fertilizers
+  - amount_fertilizers
+  - apply_water
+  - get_temperature
+  - out_of_scope
+  - pineapple
+  - pineapple_good_for
+
+entities:
+  - disease
+  - symptom
+  - solution
+  - spread
+  - task
+  - time
+  - time_param
+  - what
+  - fertilizer
+
+slots:
+  disease:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: disease
+  symptom:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: symptom
+  solution:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: solution
+  spread:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: spread
+  fertilizer:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: fertilizer
+
+responses:
+  utter_please_rephrase:
+    - text: "I'm sorry, I didn't quite understand that. Could you rephrase?"
+
+  utter_default:
+    - text: "Sorry, I am unable to understand the message. Please retype the message to me to see what I can help you with."
+
+  utter_out_of_scope:
+    - text: "Sorry, I can't handle that request."
+
+  utter_greet:
+    - text: "Hey! How can I help you?"
+
+  utter_cheer_up:
+    - text: "Here is something to cheer you up:"
+      image: "https://i.imgur.com/nGF1K8f.jpg"
+
+  utter_did_that_help:
+    - text: "Did that help you?"
+
+  utter_happy:
+    - text: "Great, carry on!"
+
+  utter_goodbye:
+    - text: "Bye"
+
+  utter_iamabot:
+    - text: "I am SIPFAA, intends to give infromation about pineapple."
+
+  utter_option:
+    - text: "I can give you.\n1) Facts about Pineapple diseases\n2) Can guide you about pineapple cultivation."
+
+  utter_unlike:
+    - text: "Sorry, I am unable to understand the message. Please retype the message to me to see what I can help you with."
+
+  utter_thanking:
+    - text: "You'r welcome !"
+    - text: "my pleasure"
+    - text: "sure thing"
+    - text: "sure"
+    - text: "no problem"
+
+  utter_disease_types:
+    - text: "These are the main diseases in pineapple cultivation.\n\n1) Wilt Disease\n2) Root Rot Disease\n3) Mealy Bug Attack"
+
+  utter_smp_wilt:
+    - text: "It's Wilt disease\n\nThe wilt disease is thought to be caused by a virus transmitted by mealybugs (Dysmicoccus brevipes). The mealybugs feed on an infected plant and then move to other plants with the help of ants or wind. Wilt is transmitted when the mealybug feeds on young leaves. The amount of wilt in a field is related to the number of mealybugs present, the length time they feed and the activity of ants."
+
+  utter_spread_wilt:
+    - text: "Of course, due to the activity of ants the mealybug will spread to the cultivations, hence it may spread the will diseases to the whole cultivation."
+
+  utter_stop_wilt:
+    - text: "Pineapple Wilt Disease Management\n\n1) Always select healthy planting material.\n2) If less than 3% of plants show wilt symptoms, pull up affected plants by hand and destroy them.\n3) If more than 3% of plants show wilt symptoms, implement the recommended mealybug control spray program.\n4) If more than 10% of plants show wilt symptoms, not use the field as a source of planting material.\n5) Keep headlands and field boundaries free of weeds, fallen timber and rubbish, as these encourage populations of ants and mealybugs."
+
+  utter_wilt:
+    - text: "The wilt disease is thought to be caused by a virus transmitted by mealybugs (Dysmicoccus brevipes). The mealybugs feed on an infected plant and then move to other plants with the help of ants or wind. Wilt is transmitted when the mealybug feeds on young leaves. The amount of wilt in a field is related to the number of mealybugs present, the length time they feed and the activity of ants.\n\nAbove-ground symptoms appear some time after the mealybugs have fed and develop most rapidly on young plants. Visible symptoms may take between 3 and 8 months to develop. Plants which have recovered and do not show obvious symptoms can still be sources of infection."
+
+  utter_apply_water:
+    - text: "They do not need a lot of water, so wait until the soil has dried out before watering, and then water the leaves and soil. They are more likely to be badly affected by over watering than under watering."
+
+  utter_get_temperature:
+    - text: "Pineapples love warm, sunny conditions. Keep it at warm room temperature, ideally between 22 and 28 degrees Celsius."
+
+  utter_pineapple:
+    - text: "The pineapple is a tropical plant with an edible fruit. it is the most economically significant plant in the family Bromeliaceae."
+
+  utter_pineapple_good_for:
+    - text: "The benefits of pineapple.\n1) Loaded with nutrients\n2) Contains disease-fighting antioxidants\n3) May aid digestion\n4) May reduce your risk of cancer\n5) May boost immunity and suppress inflammation\n6) May ease symptoms of arthritis"
+
+
+actions:
+  - action_inquire_solutions
+  - action_inquire_diseases
+  - action_inquire_spreading
+  - action_inquire_symptoms
+  - action_get_pineapple_diseases
+  - action_remind_to_water
+  - action_remind_to_fertile
+  - action_remind_to_flowering
+  - action_tell_about_fertilizers
+  - action_apply_fertilizer
+  - action_amount_fertilizers
+  - utter_get_temperature
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

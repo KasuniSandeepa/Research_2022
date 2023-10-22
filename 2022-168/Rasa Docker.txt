@@ -1,0 +1,14 @@
+docker run --user root -it -v ${pwd} 19980517/rasa-bot train
+
+docker network create action_connect	
+
+docker run -d -v ${pwd}/actions:/app/actions --net action_connect --name action-server 19980517/rasa-bot run actions
+
+docker run -it -v ${pwd}:/app -p 80:80 --net action_connect 19980517/rasa-bot run --enable-api --port 80
+
+
+#Remote
+
+docker run -d -v ${pwd}/actions --net action_connect --name action-server 19980517/rasa-bot run actions
+
+docker run -it -v ${pwd} -p 80:80 --net action_connect 19980517/rasa-bot run --enable-api --port 80

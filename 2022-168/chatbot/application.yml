@@ -1,0 +1,11 @@
+api:
+  disease:
+    url: https://sipfaa.i.tgcloud.io:443/restpp/query/SIPFAA2/
+
+password: isira1998XDM()
+
+graphname: SIPFAA2
+
+secret: hb8oupq1pe67494ba5mv9omtn28t0l3q
+
+type: mealybug

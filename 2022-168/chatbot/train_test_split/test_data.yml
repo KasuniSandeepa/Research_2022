@@ -1,0 +1,53 @@
+version: "3.1"
+nlu:
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+- intent: options
+  examples: |
+    - what is your purpose?
+- intent: inquire_symptoms
+  examples: |
+    - what are the [symptoms](symptom) of [root rot](disease)?
+- intent: disease_types
+  examples: |
+    - can you tell me about pineapple diseases?
+- intent: affirm
+  examples: |
+    - y
+- intent: inquire_disease
+  examples: |
+    - please tell me about [wilt](disease) disease
+- intent: inquire_solutions
+  examples: |
+    - what are the [solutions](solution) for [wilt](disease)?
+- intent: deny
+  examples: |
+    - not really
+    - never
+- intent: inquire_spreading
+  examples: |
+    - is that [wilt](disease) disease spreads?
+- intent: goodbye
+  examples: |
+    - bye bye
+    - see you later
+- intent: greet
+  examples: |
+    - hey there
+    - moin
+    - hi
+- intent: mood_great
+  examples: |
+    - so good
+    - feeling like a king
+    - great
+- intent: mood_unhappy
+  examples: |
+    - I am disappointed
+    - I don't feel very well
+- lookup: disease
+  examples: |
+    - wilt
+    - root rot
+    - mealy bug

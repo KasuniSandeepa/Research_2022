@@ -1,0 +1,113 @@
+version: "3.1"
+nlu:
+- intent: bot_challenge
+  examples: |
+    - am I talking to a human?
+    - are you a human?
+    - am I talking to a bot?
+- intent: options
+  examples: |
+    - what do you know?
+    - how can you help?
+    - what do you do?
+- intent: inquire_symptoms
+  examples: |
+    - please tell me about the [symptoms](symptom) of [mealy bug](disease)
+    - what are the [symptoms](symptom) of [wilt](disease) disease?
+    - tell me about the [symptoms](symptom) of [mealy bug](disease) disease
+- intent: disease_types
+  examples: |
+    - what are the pineapple diseases?
+    - I want to know about pineapple diseases
+    - what are the disease in pineapple cultivation?
+    - what types of diseases occur in pineapple?
+- intent: affirm
+  examples: |
+    - that sounds good
+    - correct
+    - indeed
+    - of course
+    - yes
+- intent: inquire_disease
+  examples: |
+    - what is [wilt](disease) disease?
+    - please tell me about [mealy bug](disease) disease
+    - tell me about [mealy bug](disease) disease
+    - what is [root rot](disease) disease?
+    - what do you know about [root rot](disease) disease?
+- intent: inquire_solutions
+  examples: |
+    - what are the [solutions](solution) for [mealy bug](disease) disease?
+    - let me know the [solutions](solution) for [mealy bug](disease) disease
+    - how can i [avoid](solution) [root rot](disease) it?
+    - are there any [solutions](solution) for [root rot](disease) disease?
+    - how can i [stop](solution) [wilt](disease) that?
+- intent: deny
+  examples: |
+    - n
+    - don't like that
+    - I don't think so
+    - no
+    - no way
+- intent: inquire_spreading
+  examples: |
+    - will it [root rot](disease) [spreads](spread)?
+    - is it [mealy bug](disease) [spreading](spread)?
+    - will [root rot](disease) [spreads](spread) to the other plants?
+    - is that [root rot](disease) [spreads](spread)?
+    - will [mealy bug](disease) disease [spreads](spread)?
+    - will it [wilt](disease) [spread](spread) to the other plants?
+- intent: goodbye
+  examples: |
+    - bye
+    - goodbye
+    - good by
+    - see you around
+    - good night
+    - have a nice day
+    - cu
+    - cee you later
+- intent: greet
+  examples: |
+    - good evening
+    - goodevening
+    - good morning
+    - hello
+    - hey
+    - goodmorning
+    - good afternoon
+    - hey dude
+    - let's go
+    - hello there
+- intent: mood_great
+  examples: |
+    - so perfect
+    - I am feeling very good
+    - I am going to save the world
+    - amazing
+    - wonderful
+    - so so perfect
+    - I am amazing
+    - I am great
+    - perfect
+    - super stoked
+    - extremely good
+- intent: mood_unhappy
+  examples: |
+    - so sad
+    - my day was horrible
+    - not good
+    - I am sad
+    - not very good
+    - sad
+    - extremly sad
+    - super sad
+    - I'm so sad
+    - unhappy
+    - so saad
+    - very sad
+- lookup: disease
+  examples: |
+    - wilt
+    - root rot
+    - mealy bug
